@@ -11,18 +11,19 @@ import androidx.navigation.compose.rememberNavController
 import com.example.navigation.ui.theme.NavigationTheme
 
 @Composable
-fun Page2(modifier: Modifier = Modifier,
-          navController: NavController
-          ) {
-    Column {
+fun Page2(
+    modifier: Modifier = Modifier,
+    navController: NavController
+) {
+    Column(modifier = modifier) {
         Text(text = "Page2")
         Button(
-            onClick ={
-                navController.navigate ( "page1")
-        }
-        ){
-            Text(text = "Ir a la page1")
+            onClick = {
+                navController.navigate("page1")
             }
+        ) {
+            Text(text = "Ir a la page1")
+        }
     }
 
 }
