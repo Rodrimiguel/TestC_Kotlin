@@ -1,8 +1,12 @@
 package com.example.navigation
 
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalDrawerSheet
 import androidx.compose.material3.ModalNavigationDrawer
@@ -68,6 +72,22 @@ fun MainPage(modifier: Modifier = Modifier) {
             modifier = modifier,
             topBar = {
                 TopAppBar(
+                    navigationIcon = {
+                        IconButton(
+                            onClick = { /*TODO*/
+                                coroutineScope.launch {
+                                    drawerState.close()
+                                }
+                            }
+                        ) {
+                            Icon(
+                                imageVector = Icons.Filled.Menu,
+                                contentDescription = "Button Hambur"
+                            )
+
+                        }
+
+                    },
                     title = {
                         Text(text = "Cualquier cosa")
                     },
